@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context=".HomeActivity"
+    >
+
+    <TextView
+        android:text="@string/mainTitle"
+        style="@style/Title"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentTop = "true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mainTitle" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchView"
+        android:text="Search"
+        android:layout_below="@+id/mainTitle"
+        android:layout_alignLeft="@+id/mainTitle"
+        android:layout_alignStart="@+id/mainTitle"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/mainTitle"
+        android:layout_alignEnd="@+id/mainTitle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Restaurant"
+        style="@style/button"
+        android:id="@+id/addRestaurantButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/searchView"
+        android:layout_alignStart="@+id/searchView"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:onClick="goToAddRestaurant" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/listView"
+        android:id="@+id/restaurantListView"
+        android:layout_below="@+id/searchView"
+        android:layout_alignLeft="@+id/searchView"
+        android:layout_alignStart="@+id/searchView"
+        android:layout_marginTop="35dp"
+
+        android:layout_above="@+id/addRestaurantButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/button"
+        android:text="About"
+        android:id="@+id/aboutButton"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/restaurantListView"
+        android:layout_toRightOf="@+id/addRestaurantButton"
+        android:layout_toEndOf="@+id/addRestaurantButton"
+        android:layout_marginLeft="22dp"
+        android:layout_alignRight="@+id/searchView"
+        android:layout_alignEnd="@+id/searchView"
+
+        android:onClick="goToAbout" />
+
+
+</RelativeLayout>

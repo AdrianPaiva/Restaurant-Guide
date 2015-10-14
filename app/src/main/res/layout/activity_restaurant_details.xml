@@ -1,0 +1,191 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    android:fillViewport="true"
+    tools:context="ca.gbc.mobile.adrianpaiva.personalrestaurantguide.RestaurantDetailsActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/adg">
+
+
+    <TextView
+        android:text="name"
+        android:id="@+id/restaurantName"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="address"
+        android:id="@+id/restaurantAddress"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restaurantName"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:text="phone number"
+        android:id="@+id/restaurantPhoneNumber"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restaurantAddress"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:text="description"
+        android:id="@+id/restaurantDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/restaurantPhoneNumber"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button"
+            android:text="Share"
+            android:id="@+id/shareButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View On Map"
+            style="@style/button"
+            android:id="@+id/viewmapButton"
+            android:layout_below="@+id/goToEditButton"
+            android:layout_marginTop="10dp"
+
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            style="@style/button"
+            android:id="@+id/goToEditButton"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="18dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            style="@style/button"
+            android:id="@+id/buttonDelete"
+            android:layout_alignTop="@+id/goToEditButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="goToDeleteActivity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Type"
+            android:id="@+id/textView"
+            android:layout_below="@+id/restaurantDescription"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="52dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Price"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="52dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Style"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Rating"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="53dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="tag1"
+            android:id="@+id/restaurantTag1"
+            android:layout_above="@+id/textView2"
+            android:layout_toLeftOf="@+id/buttonDelete"
+            android:layout_toStartOf="@+id/buttonDelete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="tag2"
+            android:id="@+id/restaurantTag2"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_alignRight="@+id/restaurantTag1"
+            android:layout_alignEnd="@+id/restaurantTag1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="tag3"
+            android:id="@+id/restaurantTag3"
+            android:layout_above="@+id/textView4"
+            android:layout_alignRight="@+id/restaurantTag2"
+            android:layout_alignEnd="@+id/restaurantTag2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="rating"
+            android:id="@+id/restaurantRating"
+
+            android:layout_alignTop="@+id/textView4"
+            android:layout_alignLeft="@+id/restaurantTag3"
+            android:layout_alignStart="@+id/restaurantTag3" />
+
+    </RelativeLayout>
+
+
+    </ScrollView>
